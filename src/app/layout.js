@@ -4,6 +4,7 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import Link from "next/link";
+import Script from "next/script";
 
 export const metadata = {
   title: "웹 언어",
@@ -55,6 +56,7 @@ export default function RootLayout({ children }) {
             </Link>
           </div>
         </main>
+        <Script src="/main.js" strategy="afterInteractive" />
       </body>
     </html>
   );
