@@ -7,6 +7,7 @@ import Navbar from "react-bootstrap/Navbar";
 import Link from "next/link";
 import Script from "next/script";
 // import { useState, useEffect } from "react";
+import Controls from "./Controls";
 
 export const metadata = {
   title: "웹 언어",
@@ -58,17 +59,7 @@ export default async function RootLayout({ children }) {
         <main>
           {children}
           <hr />
-          <div className="d-flex gap-1">
-            <Link className="btn btn-primary" href="/create">
-              Create
-            </Link>
-            <Link className="btn btn-secondary" href="/update">
-              Update
-            </Link>
-            <Link className="btn btn-danger" href="/delete">
-              Delete
-            </Link>
-          </div>
+          <Controls />
         </main>
         <Script src="/main.js" strategy="afterInteractive" />
       </body>
