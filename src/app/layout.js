@@ -26,7 +26,7 @@ export default async function RootLayout({ children }) {
   // }, []);
   // console.log(topics);
 
-  const response = await fetch("http://localhost:9999/topics");
+  const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/topics`);
   const topics = await response.json();
 
   console.log("공통 레이아웃 작동");
